@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "exohunter-e2e"
+version = "0.1.0"
+description = "End-to-end testing for Exohunter using Playwright and Behave."
+authors = ["Francisco Nasso <francisco.nasso@correo.ucu.edu.uy>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+playwright = "^1.0.0"
+behave = "^1.2.6"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
