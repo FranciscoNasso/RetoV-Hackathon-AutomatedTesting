@@ -10,25 +10,8 @@ class HomePage:
         return self.page.title()
 
     def click_explore(self):
-        # try common selectors for the explore action
-        selectors = [
-            'a[routerlink="/explorer"]',
-            'button[routerlink="/explorer"]',
-            'text=Explore',
-        ]
-        for sel in selectors:
-            try:
-                locator = self.page.locator(sel)
-                if locator.count() > 0:
-                    locator.first.click()
-                    return
-            except Exception:
-                continue
-        # fallback: click any element containing 'Explore'
-        try:
-            self.page.click('text=Explore')
-        except Exception:
-            pass
+        # Use the correct selector for the explore action
+        self.page.locator('a[routerlink="/explorer"]').first.click()
 
     def click_download(self):
         self.page.click("text=Download")
